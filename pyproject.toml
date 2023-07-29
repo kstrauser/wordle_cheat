@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "wordle-cheat"
+version = "0.1.0"
+description = "Shamelessly cheat at Wordle"
+authors = ["Kirk Strauser <kirk@strauser.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "wordle_cheat"}]
+include = ["data/words_alpha.txt"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+cheat_at_wordle = 'wordle_cheat.cli:main'
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
